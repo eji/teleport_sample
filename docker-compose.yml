@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  teleport:
+    build: .
+    command: ['teleport', 'start']
+    ports:
+      - "13025:3025" # Auth Server
+      - "13080:3080" # Web Proxy
+      - "13023:3023" # SSH Proxy
+      - "13022:3022"
